@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logo img {
+  width: 5%;
+  display: block;
+  margin-left: 35px;
+
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+  padding-top: 10px;
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 110%;
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+  padding-left: 20px;
+  font-weight: bold;
+}
+h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+h4 {
+  text-align: center;
+  font-weight: lighter;
+  line-height: 1.7;
+  font-family: "Times New Roman", Times, serif;
+}
+h5 {
+  font-size: 9rem;
+  margin-top: 10px;
+  font-weight: lighter;
+  margin-left: 20px;
+  text-align: left;
+}
+.p_1 {
+  margin-left: 9rem;
+  margin-right: 10rem;
+  margin-top: 40px;
+}
+a {
+  color: #000000;
+}
+.grid_1-1-1 {
+  display: grid;
+  width: 200px;
+  height: auto;
+  margin-left: 6rem;
+  gap: 10px;
+}
+.grid_uxui {
+  padding-top: 10px;
+  gap: 15px;
+  display: grid;
+  line-height: 1.7;
+  margin: 80px;
+}
+
+/********* burgermenu ***********/
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  margin: 0 30px;
+}
+
+.menu a {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  border: 2px #000000;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  width: 180px;
+  text-align: center;
+  padding: 10px 0;
+  color: black;
+  text-decoration: underline;
+  background-color: white;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 10px;
+  border-width: 10px;
+  border: 2px #000000;
+}
+
+.menu a:hover {
+  text-decoration: overline;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+  padding-right: 0.6rem;
+  padding-bottom: 7rem;
+}
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+/********* burgermenu slut ***********/
+img {
+  width: 400px;
+  height: auto;
+}
+
+.slider {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 40px;
+
+  margin-right: 40px;
+}
+.grid_1-1 {
+  display: grid;
+  gap: 1px;
+}
+
+.slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slide 15s infinite;
+}
+.slider img:nth-child(1) {
+  animation-delay: 0s;
+}
+.slider img:nth-child(2) {
+  animation-delay: 3s;
+}
+.slider img:nth-child(3) {
+  animation-delay: 6s;
+}
+.slider img:nth-child(4) {
+  animation-delay: 9s;
+}
+.slider img:nth-child(5) {
+  animation-delay: 12s;
+}
+.slider img:nth-child(6) {
+  animation-delay: 15s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+footer {
+  padding: 15px;
+  margin: 10px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  opacity: 50%;
+  margin-top: 100px;
+}
+/******* desktop ******/
+@media (min-width: 800px) {
+  img {
+    width: 400px;
+    height: auto;
+  }
+
+  .slider {
+    width: 700px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 40px;
+  }
+  .grid_1-1 {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 1px;
+  }
+
+  .slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slide 15s infinite;
+  }
+  .slider img:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .slider img:nth-child(2) {
+    animation-delay: 3s;
+  }
+  .slider img:nth-child(3) {
+    animation-delay: 6s;
+  }
+  .slider img:nth-child(4) {
+    animation-delay: 9s;
+  }
+  .slider img:nth-child(5) {
+    animation-delay: 12s;
+  }
+  .slider img:nth-child(6) {
+    animation-delay: 15s;
+  }
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .grid_uxui {
+    padding-top: 50px;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    line-height: 1.7;
+  }
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 200px;
+    height: auto;
+    margin-left: 9rem;
+    margin-top: 2rem;
+    gap: 10px;
+  }
+  h1 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 4rem;
+    padding-top: 10px;
+  }
+
+  h2 {
+    font-weight: lighter;
+    font-size: 120%;
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+    padding-left: 20px;
+    font-weight: bold;
+  }
+  h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  h4 {
+    text-align: center;
+    font-weight: lighter;
+    line-height: 1.7;
+    font-family: "Times New Roman", Times, serif;
+  }
+  h5 {
+    font-size: 9rem;
+    margin-top: 10px;
+    font-weight: lighter;
+    margin-left: 20px;
+    text-align: left;
+  }
+}
